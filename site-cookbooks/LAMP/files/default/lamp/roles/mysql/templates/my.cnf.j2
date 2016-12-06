@@ -74,7 +74,6 @@ max-heap-table-size = {{ max_heap_table_size }}
 {% endif %}
 
 ### Networking
-back-log = 100
 {% if ansible_memtotal_mb <= 256 %}
 max-connections = 25
 {% elif ansible_memtotal_mb > 256 and ansible_memtotal_mb <= 512 %}
@@ -103,7 +102,7 @@ wait-timeout = {{ wait_timeout }}
 net_read_timeout = {{ net_read_timeout }}
 net_write_timeout = {{ net_write_timeout }}
 # This value is the size of the listen queue for incoming TCP/IP connections.
-back_log = {{ back_log }}
+back-log = {{ back_log }}
 
 #### Storage Engines
 ## Set this to force MySQL to use a particular engine / table-type
