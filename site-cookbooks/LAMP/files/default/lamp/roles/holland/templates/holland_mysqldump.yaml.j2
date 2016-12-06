@@ -11,11 +11,11 @@ alarms      :
         notification_plan_id  : {{notification_plan}} 
         criteria              : |
           if (metric['sql_creds_exist'] == 'false') {
-            return new AlarmStatus(CRITICAL, 'holland-plugin: MySQL credentials file \
+            return new AlarmStatus(CRITICAL, 'holland-plugin: MySQL credentials file
                     does not exist.');
           }
           if (metric['sql_status_succeeds'] == 'false') {
-            return new AlarmStatus(CRITICAL, 'holland-plugin: MySQL credentials do \
+            return new AlarmStatus(CRITICAL, 'holland-plugin: MySQL credentials do
                     not authenticate.');
           }
           if (metric['dump_age'] > 172800) { 
